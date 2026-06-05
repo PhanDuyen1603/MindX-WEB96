@@ -4,6 +4,7 @@ const propertySchema = new mongoose.Schema({
     price: { type: Number, required: true },
     area: { type: Number, required: true },
     status: { type: String, enum: ['Đang bán', 'Đã bán', 'Dừng bán'], default: 'Đang bán' },
+    images: { type: [String], default: [] },
     employeeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee', required: true },
 }, {
     collection: 'properties',
